@@ -1,0 +1,21 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+solana_event_manager = "69ZhLTWTy8KrBJnoFuexZowd59B3ucRM1BxdgXKd246N"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/home/leandro/.config/solana/id.json"
+
+[test]
+startup_wait = 10000
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
